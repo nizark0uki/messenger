@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Chat</title>
+    <link rel="icon" href="cpu.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #eef1f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            width: 1020px;
+            height: 95%;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .messages {
+            max-height: 350px;
+            overflow-y: auto;
+            padding: 15px;
+            position: absolute;
+            bottom: 169px;
+            left: 0;
+            right: 0;
+        }
+
+        .message {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 12px;
+            border-radius: 10px;
+            background: #e9f5ff;
+            transition: all 0.2s;
+        }
+
+        .message:hover {
+            background: #d6ebff;
+        }
+
+        .message i {
+            font-size: 30px;
+            margin-right: 12px;
+            color: #007bff;
+        }
+
+        .message-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sender {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .text {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .input-container {
+            padding: 15px;
+            height: 169px;
+            background: #f8f9fa;
+            border-top: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .send-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .send-btn:hover {
+            background: #0056b3;
+        }
+
+        .send-btn i {
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="header">
+            <img src="cpu.png" alt="cpu logo">
+            CPU Chat
+        </div>
+        <div class="messages" id="messages">
+            <div class="message">
+                <i class="fas fa-user-circle"></i>
+                <div class="message-content">
+                    <div class="sender">mazen</div>
+                    <div class="text">Hellooo</div>
+                </div>
+            </div>
+            <div class="message">
+                <i class="fas fa-user-circle"></i>
+                <div class="message-content">
+                    <div class="sender">mazen</div>
+                    <div class="text">Hellooo</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="receiver" placeholder="Enter recipient name...">
+            <input type="text" id="message" placeholder="Write your message...">
+            <button class="send-btn" onclick="sendMessage()">Send <i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>
